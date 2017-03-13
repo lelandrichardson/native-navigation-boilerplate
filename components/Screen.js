@@ -1,0 +1,50 @@
+import React, { PropTypes } from 'react';
+import {
+  ScrollView,
+} from 'react-native';
+
+import Navigator from 'native-navigation';
+
+const propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
+  onPress: PropTypes.func,
+};
+
+const defaultProps = {
+};
+
+const contextTypes = {
+  nativeNavigationInstanceId: PropTypes.string,
+};
+
+export default class Screen extends React.Component {
+  render() {
+    const {
+      children,
+      title,
+    } = this.props;
+
+    return (
+      <Navigator.Config
+        title={title}
+        backgroundColor="#f7f7f7"
+        elevation={4}
+        onBackPress={() => console.log('onBackPress')}
+        onLeftPress={() => console.log('onLeftPress')}
+        onRightPress={(x) => console.log('onRightPress', x)}
+        onAppear={() => console.log('onAppear', this.context.nativeNavigationInstanceId)}
+        onDisappear={() => console.log('onDisappear', this.context.nativeNavigationInstanceId)}
+      >
+        <ScrollView>
+          <Navigator.Spacer animated />
+          {children}
+        </ScrollView>
+      </Navigator.Config>
+    );
+  }
+}
+
+Screen.defaultProps = defaultProps;
+Screen.propTypes = propTypes;
+Screen.contextTypes = contextTypes;

@@ -1,0 +1,24 @@
+{
+  "name": "ReactNativeStarter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd ios; pod install; cd -;",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "native-navigation": "^0.1.0",
+    "react": "15.4.2",
+    "react-native": "^0.42.0"
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "19.0.2",
+    "react-test-renderer": "15.4.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

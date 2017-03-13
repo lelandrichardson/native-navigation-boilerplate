@@ -1,0 +1,6 @@
+framework module NativeNavigation {
+  umbrella header "native-navigation-umbrella.h"
+
+  export *
+  module * { export * }
+}
