@@ -10,6 +10,7 @@ navigation.
 git clone https://github.com/lelandrichardson/native-navigation-boilerplate.git
 cd native-navigation-boilerplate
 npm install
+npm start
 ```
 
 To run the iOS App:
