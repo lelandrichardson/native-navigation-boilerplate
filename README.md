@@ -16,6 +16,8 @@ npm start
 To run the iOS App:
 
 ```bash
+cd ios
+pod install
 react-native run-ios
 ```
 
